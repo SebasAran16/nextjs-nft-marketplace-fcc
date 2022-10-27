@@ -1,9 +1,10 @@
 1. Home Page:
-   -Show recently listed NFT
-   -If you own the NFT, you can update the listing
-   -If not, you can buy the listing
+   -Show recently listed NFT ✅
+   -If you own the NFT, you can update the listing ✅
+   -If not, you can buy the listing ✅
 2. Sell Page:
-   -List your NFTs on the marketplace
+   -List your NFTs on the marketplace ✅
+   -Withdraw proceeds ✅
 
 Moralis: How do we tell it to listen to our events?
 

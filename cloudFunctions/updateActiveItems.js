@@ -14,7 +14,7 @@ Moralis.Cloud.afterSave("ItemListed", async function (request) {
 
         const activeItem = new ActiveItem();
         activeItem.set("marketplaceAddress", request.object.get("address"));
-        activeItem.set("nftAddress", request.object.get("nftAddresss"));
+        activeItem.set("nftAddress", request.object.get("nftAddress"));
         activeItem.set("price", request.object.get("price"));
         activeItem.set("tokenId", request.object.get("tokenId"));
         activeItem.set("seller", request.object.get("seller"));
@@ -36,7 +36,7 @@ Moralis.Cloud.afterSave("ItemCanceled", async function (request) {
         const ActiveItem = Moralis.Object.extend("ActiveItem");
         const query = new Moralis.Query(ActiveItem);
         query.equalTo("marketplaceAddress", request.object.get("address"));
-        query.equalTo("nftAddress", request.object.get("nftAddress"));
+        query.equalTo("nftAddress", request.object.get("tokenAddress"));
         query.equalTo("tokenId", request.object.get("tokenId"));
         logger.info(`Marketplace | Query: ${query}`);
         const canceledItem = await query.first();
